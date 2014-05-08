@@ -224,9 +224,6 @@ typedef void (^data_callback)(SRWebSocket *webSocket,  NSData *data);
     
     dispatch_queue_t _workQueue;
     NSMutableArray *_consumers;
-
-    NSInputStream *_inputStream;
-    NSOutputStream *_outputStream;
    
     NSMutableData *_readBuffer;
     NSUInteger _readBufferOffset;

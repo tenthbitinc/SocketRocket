@@ -35,7 +35,11 @@ extern NSString *const SRWebSocketErrorDomain;
 #pragma mark - SRWebSocket
 
 @interface SRWebSocket : NSObject <NSStreamDelegate>
-
+{
+@public
+    NSInputStream *_inputStream;
+    NSOutputStream *_outputStream;
+}
 @property (nonatomic, assign) id <SRWebSocketDelegate> delegate;
 
 @property (nonatomic, readonly) SRReadyState readyState;
